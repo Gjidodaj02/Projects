@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='Cp1252'>
+  
+  <title>Result Data</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <style>
+  * { 
+    margin: 0; 
+    padding: 0; 
+  }
+  body { 
+    font: 14px/1.4 Palatino, Serif; 
+  }
+  
+  /* 
+  Generic Styling, for Desktops/Laptops 
+  */
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+  td, th { 
+    padding: 6px; 
+    border: 1px solid #9B9B9B; 
+    text-align: left; 
+  }
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+    table, thead, tbody, th, td, tr { display: block; }
+    thead tr { position: absolute;top: -9999px;left: -9999px;}
+    tr { border: 1px solid #9B9B9B; }
+    td { border: none;border-bottom: 1px solid #9B9B9B; position: relative;padding-left: 50%; }
+    
+    td:before { position: absolute;top: 6px;left: 6px;width: 45%; padding-right: 10px; white-space: nowrap;}
+    
+    /*
+    Label the data
+    */
+td:nth-of-type(1):before { content: "PROD_NAME"; }
+td:nth-of-type(2):before { content: "PRODSALARY"; }
+td:nth-of-type(3):before { content: "ACTOR_NAME"; }
+td:nth-of-type(4):before { content: "ACTORSALARY"; }
+  }
+  
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    body { 
+      padding: 0; 
+      margin: 0; 
+      width: 320px; }
+    }
+  
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body { 
+      width: 495px; 
+    }
+  }
+  
+  </style>
+  <!--<![endif]-->
+<script type="text/javascript">
+
+function search(){
+  
+  var s = document.getElementById('search').value;
+
+  rows = document.getElementById('data').getElementsByTagName('TR');
+  for(var i=0;i<rows.length;i++){
+    if ( rows[i].textContent.indexOf(s)>0  || s.length==0 ) {
+	  rows[i].style.display ='';
+    } else {
+      rows[i].style.display ='none';
+    }
+  }
+}
+
+
+var timer;
+function delayedSearch() {
+	clearTimeout(timer);
+	console.log('delay-ing')
+    timer = setTimeout(function () {
+		console.log('delay-running')
+		search();
+    }, 500);
+  }</script>
+</head>
+
+<body>
+<div><input type="text" size="30" maxlength="1000" value="" id="search" onkeyup="delayedSearch();" /><input type="button" value="Go" onclick="lsearch();"/> </div>
+<table><thead><tr>	<th>PROD_NAME</th>
+	<th>PRODSALARY</th>
+	<th>ACTOR_NAME</th>
+	<th>ACTORSALARY</th>
+</tr></thead>
+<tbody id="data">
+
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>Carroll O_Conner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Carroll O_Conner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>Carroll O_Conner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Carroll O_Conner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>Carroll O_Conner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Carroll O_Conner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Carroll O_Conner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>Jean Stapleton</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Jean Stapleton</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>Jean Stapleton</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Jean Stapleton</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>Jean Stapleton</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Jean Stapleton</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Jean Stapleton</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">20000</td>
+<td>Isabel Sanford</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">20000</td>
+<td>Isabel Sanford</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">25000</td>
+<td>Isabel Sanford</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">25000</td>
+<td>Isabel Sanford</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">25000</td>
+<td>Isabel Sanford</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">20000</td>
+<td>Isabel Sanford</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">10000</td>
+<td>Mel Stewart</td>
+<td align="right">10000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>Sherman Hemsley</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Sherman Hemsley</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">25000</td>
+<td>Sherman Hemsley</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">25000</td>
+<td>Sherman Hemsley</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>Sherman Hemsley</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Sherman Hemsley</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">25000</td>
+<td>Sherman Hemsley</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>Sherman Hemsley</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Sherman Hemsley</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Sherman Hemsley</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">10000</td>
+<td>Liz Torres</td>
+<td align="right">10000</td>
+	</tr>
+	<tr>
+<td>&nbsp;</td>
+<td align="right">&nbsp;</td>
+<td>Liz Torres</td>
+<td align="right">15000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">20000</td>
+<td>Bea Arthur</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">20000</td>
+<td>Bea Arthur</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">25000</td>
+<td>Bea Arthur</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">25000</td>
+<td>Bea Arthur</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">25000</td>
+<td>Bea Arthur</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">20000</td>
+<td>Bea Arthur</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">20000</td>
+<td>Ester Rolle</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">20000</td>
+<td>Ester Rolle</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">20000</td>
+<td>Ester Rolle</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">20000</td>
+<td>Ester Rolle</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">20000</td>
+<td>Ester Rolle</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">20000</td>
+<td>Ester Rolle</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">20000</td>
+<td>John Amos</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">20000</td>
+<td>John Amos</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">20000</td>
+<td>John Amos</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">10000</td>
+<td>John Amos</td>
+<td align="right">10000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">20000</td>
+<td>JJ Walker</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">20000</td>
+<td>JJ Walker</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">20000</td>
+<td>JJ Walker</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>Edward Asner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Edward Asner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">25000</td>
+<td>Edward Asner</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">25000</td>
+<td>Edward Asner</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>Edward Asner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Edward Asner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">25000</td>
+<td>Edward Asner</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>Edward Asner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Edward Asner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Edward Asner</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>R Walden</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>R Walden</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>R Walden</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>R Walden</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>R Walden</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>R Walden</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>R Walden</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">25000</td>
+<td>Mary Tyler Moore</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">25000</td>
+<td>Mary Tyler Moore</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">25000</td>
+<td>Mary Tyler Moore</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>Ted Knight</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Ted Knight</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>Ted Knight</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Ted Knight</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>Ted Knight</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Ted Knight</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Ted Knight</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>&nbsp;</td>
+<td align="right">&nbsp;</td>
+<td>Ted Knight</td>
+<td align="right">1000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>Cloris Leachman</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Cloris Leachman</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">25000</td>
+<td>Cloris Leachman</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">25000</td>
+<td>Cloris Leachman</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>Cloris Leachman</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Cloris Leachman</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">25000</td>
+<td>Cloris Leachman</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>Cloris Leachman</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Cloris Leachman</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Cloris Leachman</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Valerie Harper</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>Alan Alda</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Alan Alda</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>Alan Alda</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Alan Alda</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>Alan Alda</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Alan Alda</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Alan Alda</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">25000</td>
+<td>Loretta Swit</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">25000</td>
+<td>Loretta Swit</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">25000</td>
+<td>Loretta Swit</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">10000</td>
+<td>Loretta Swit</td>
+<td align="right">10000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">25000</td>
+<td>Larry Linville</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">25000</td>
+<td>Larry Linville</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">25000</td>
+<td>Larry Linville</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>&nbsp;</td>
+<td align="right">&nbsp;</td>
+<td>George Morgan</td>
+<td align="right">5000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">20000</td>
+<td>William Christopher</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">20000</td>
+<td>William Christopher</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">20000</td>
+<td>William Christopher</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>Adrienne Barbeau</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Adrienne Barbeau</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>Adrienne Barbeau</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Adrienne Barbeau</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>Adrienne Barbeau</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Adrienne Barbeau</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Adrienne Barbeau</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">25000</td>
+<td>Ed O_Neill</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">25000</td>
+<td>Ed O_Neill</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">25000</td>
+<td>Ed O_Neill</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">25000</td>
+<td>Katay Sagal</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">25000</td>
+<td>Katay Sagal</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">25000</td>
+<td>Katay Sagal</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>&nbsp;</td>
+<td align="right">&nbsp;</td>
+<td>Katay Sagal</td>
+<td align="right">2000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">10000</td>
+<td>Christina Applegate</td>
+<td align="right">10000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">10000</td>
+<td>L Gerritsen</td>
+<td align="right">10000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">20000</td>
+<td>Julie Kavner</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">20000</td>
+<td>Julie Kavner</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">20000</td>
+<td>Julie Kavner</td>
+<td align="right">20000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">10000</td>
+<td>Mike Judge</td>
+<td align="right">10000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">10000</td>
+<td>Mike Judge</td>
+<td align="right">10000</td>
+	</tr>
+	<tr>
+<td>Mike Jordan</td>
+<td align="right">30000</td>
+<td>Tyne Daly</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Tyne Daly</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">30000</td>
+<td>Tyne Daly</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">30000</td>
+<td>Tyne Daly</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>V Chamberlan</td>
+<td align="right">30000</td>
+<td>Tyne Daly</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Tyne Daly</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>Dinah Marler</td>
+<td align="right">30000</td>
+<td>Tyne Daly</td>
+<td align="right">30000</td>
+	</tr>
+	<tr>
+<td>R S Lewis</td>
+<td align="right">25000</td>
+<td>Sharon Gless</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>A Spaulding</td>
+<td align="right">25000</td>
+<td>Sharon Gless</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">25000</td>
+<td>Sharon Gless</td>
+<td align="right">25000</td>
+	</tr>
+	<tr>
+<td>&nbsp;</td>
+<td align="right">&nbsp;</td>
+<td>James Arness</td>
+<td align="right">22750</td>
+	</tr>
+	<tr>
+<td>&nbsp;</td>
+<td align="right">&nbsp;</td>
+<td>Amanda Blake</td>
+<td align="right">17500</td>
+	</tr>
+	<tr>
+<td>&nbsp;</td>
+<td align="right">&nbsp;</td>
+<td>Ken Curtis</td>
+<td align="right">17500</td>
+	</tr>
+	<tr>
+<td>&nbsp;</td>
+<td align="right">&nbsp;</td>
+<td>Milburn Stone</td>
+<td align="right">15400</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">10000</td>
+<td>Roy Clark</td>
+<td align="right">10000</td>
+	</tr>
+	<tr>
+<td>&nbsp;</td>
+<td align="right">&nbsp;</td>
+<td>Mike Wallace</td>
+<td align="right">8000</td>
+	</tr>
+	<tr>
+<td>Susan Piper</td>
+<td align="right">10000</td>
+<td>Morley Schaffer</td>
+<td align="right">10000</td>
+	</tr>
+</tbody></table><!-- SQL:
+SELECT /*+ no_parallel("TVJOINQUERY5") */  * FROM "902GJIDODAJ"."TVJOINQUERY5"--></body></html>

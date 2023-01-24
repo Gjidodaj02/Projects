@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='Cp1252'>
+  
+  <title>Result Data</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <style>
+  * { 
+    margin: 0; 
+    padding: 0; 
+  }
+  body { 
+    font: 14px/1.4 Palatino, Serif; 
+  }
+  
+  /* 
+  Generic Styling, for Desktops/Laptops 
+  */
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+  td, th { 
+    padding: 6px; 
+    border: 1px solid #9B9B9B; 
+    text-align: left; 
+  }
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+    table, thead, tbody, th, td, tr { display: block; }
+    thead tr { position: absolute;top: -9999px;left: -9999px;}
+    tr { border: 1px solid #9B9B9B; }
+    td { border: none;border-bottom: 1px solid #9B9B9B; position: relative;padding-left: 50%; }
+    
+    td:before { position: absolute;top: 6px;left: 6px;width: 45%; padding-right: 10px; white-space: nowrap;}
+    
+    /*
+    Label the data
+    */
+td:nth-of-type(1):before { content: "ACTOR_NUM"; }
+td:nth-of-type(2):before { content: "ACTOR_NAME"; }
+td:nth-of-type(3):before { content: "AGENT_NUM"; }
+td:nth-of-type(4):before { content: "AGENT_NAME"; }
+  }
+  
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    body { 
+      padding: 0; 
+      margin: 0; 
+      width: 320px; }
+    }
+  
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body { 
+      width: 495px; 
+    }
+  }
+  
+  </style>
+  <!--<![endif]-->
+<script type="text/javascript">
+
+function search(){
+  
+  var s = document.getElementById('search').value;
+
+  rows = document.getElementById('data').getElementsByTagName('TR');
+  for(var i=0;i<rows.length;i++){
+    if ( rows[i].textContent.indexOf(s)>0  || s.length==0 ) {
+	  rows[i].style.display ='';
+    } else {
+      rows[i].style.display ='none';
+    }
+  }
+}
+
+
+var timer;
+function delayedSearch() {
+	clearTimeout(timer);
+	console.log('delay-ing')
+    timer = setTimeout(function () {
+		console.log('delay-running')
+		search();
+    }, 500);
+  }</script>
+</head>
+
+<body>
+<div><input type="text" size="30" maxlength="1000" value="" id="search" onkeyup="delayedSearch();" /><input type="button" value="Go" onclick="lsearch();"/> </div>
+<table><thead><tr>	<th>ACTOR_NUM</th>
+	<th>ACTOR_NAME</th>
+	<th>AGENT_NUM</th>
+	<th>AGENT_NAME</th>
+</tr></thead>
+<tbody id="data">
+
+	<tr>
+<td align="right">7</td>
+<td>Bea Arthur</td>
+<td align="right">1</td>
+<td>T Singletary</td>
+	</tr>
+	<tr>
+<td align="right">25</td>
+<td>Christina Applegate</td>
+<td align="right">1</td>
+<td>T Singletary</td>
+	</tr>
+	<tr>
+<td align="right">17</td>
+<td>Alan Alda</td>
+<td align="right">1</td>
+<td>T Singletary</td>
+	</tr>
+	<tr>
+<td align="right">1</td>
+<td>Carroll O_Conner</td>
+<td align="right">1</td>
+<td>T Singletary</td>
+	</tr>
+	<tr>
+<td align="right">13</td>
+<td>Mary Tyler Moore</td>
+<td align="right">1</td>
+<td>T Singletary</td>
+	</tr>
+	<tr>
+<td align="right">4</td>
+<td>Mel Stewart</td>
+<td align="right">2</td>
+<td>Gary Larson</td>
+	</tr>
+	<tr>
+<td align="right">2</td>
+<td>Jean Stapleton</td>
+<td align="right">2</td>
+<td>Gary Larson</td>
+	</tr>
+	<tr>
+<td align="right">29</td>
+<td>Tyne Daly</td>
+<td align="right">2</td>
+<td>Gary Larson</td>
+	</tr>
+	<tr>
+<td align="right">22</td>
+<td>Adrienne Barbeau</td>
+<td align="right">2</td>
+<td>Gary Larson</td>
+	</tr>
+	<tr>
+<td align="right">19</td>
+<td>Larry Linville</td>
+<td align="right">2</td>
+<td>Gary Larson</td>
+	</tr>
+	<tr>
+<td align="right">18</td>
+<td>Loretta Swit</td>
+<td align="right">2</td>
+<td>Gary Larson</td>
+	</tr>
+	<tr>
+<td align="right">15</td>
+<td>Cloris Leachman</td>
+<td align="right">2</td>
+<td>Gary Larson</td>
+	</tr>
+	<tr>
+<td align="right">8</td>
+<td>Ester Rolle</td>
+<td align="right">2</td>
+<td>Gary Larson</td>
+	</tr>
+	<tr>
+<td align="right">10</td>
+<td>JJ Walker</td>
+<td align="right">3</td>
+<td>T Bradshaw</td>
+	</tr>
+	<tr>
+<td align="right">20</td>
+<td>George Morgan</td>
+<td align="right">3</td>
+<td>T Bradshaw</td>
+	</tr>
+	<tr>
+<td align="right">3</td>
+<td>Isabel Sanford</td>
+<td align="right">3</td>
+<td>T Bradshaw</td>
+	</tr>
+	<tr>
+<td align="right">33</td>
+<td>Ken Curtis</td>
+<td align="right">3</td>
+<td>T Bradshaw</td>
+	</tr>
+	<tr>
+<td align="right">32</td>
+<td>Amanda Blake</td>
+<td align="right">3</td>
+<td>T Bradshaw</td>
+	</tr>
+	<tr>
+<td align="right">23</td>
+<td>Ed O_Neill</td>
+<td align="right">3</td>
+<td>T Bradshaw</td>
+	</tr>
+	<tr>
+<td align="right">5</td>
+<td>Sherman Hemsley</td>
+<td align="right">4</td>
+<td>Chris Berman</td>
+	</tr>
+	<tr>
+<td align="right">11</td>
+<td>Edward Asner</td>
+<td align="right">4</td>
+<td>Chris Berman</td>
+	</tr>
+	<tr>
+<td align="right">24</td>
+<td>Katay Sagal</td>
+<td align="right">4</td>
+<td>Chris Berman</td>
+	</tr>
+	<tr>
+<td align="right">21</td>
+<td>William Christopher</td>
+<td align="right">4</td>
+<td>Chris Berman</td>
+	</tr>
+	<tr>
+<td align="right">14</td>
+<td>Ted Knight</td>
+<td align="right">5</td>
+<td>Bill Gates</td>
+	</tr>
+	<tr>
+<td align="right">6</td>
+<td>Liz Torres</td>
+<td align="right">5</td>
+<td>Bill Gates</td>
+	</tr>
+	<tr>
+<td align="right">27</td>
+<td>Julie Kavner</td>
+<td align="right">5</td>
+<td>Bill Gates</td>
+	</tr>
+	<tr>
+<td align="right">34</td>
+<td>Milburn Stone</td>
+<td align="right">5</td>
+<td>Bill Gates</td>
+	</tr>
+	<tr>
+<td align="right">31</td>
+<td>James Arness</td>
+<td align="right">6</td>
+<td>H Clinton</td>
+	</tr>
+	<tr>
+<td align="right">9</td>
+<td>John Amos</td>
+<td align="right">6</td>
+<td>H Clinton</td>
+	</tr>
+	<tr>
+<td align="right">12</td>
+<td>R Walden</td>
+<td align="right">6</td>
+<td>H Clinton</td>
+	</tr>
+	<tr>
+<td align="right">30</td>
+<td>Sharon Gless</td>
+<td align="right">6</td>
+<td>H Clinton</td>
+	</tr>
+	<tr>
+<td align="right">36</td>
+<td>Mike Wallace</td>
+<td align="right">6</td>
+<td>H Clinton</td>
+	</tr>
+	<tr>
+<td align="right">28</td>
+<td>Mike Judge</td>
+<td align="right">6</td>
+<td>H Clinton</td>
+	</tr>
+	<tr>
+<td align="right">26</td>
+<td>L Gerritsen</td>
+<td align="right">6</td>
+<td>H Clinton</td>
+	</tr>
+	<tr>
+<td align="right">35</td>
+<td>Roy Clark</td>
+<td align="right">6</td>
+<td>H Clinton</td>
+	</tr>
+	<tr>
+<td align="right">16</td>
+<td>Valerie Harper</td>
+<td align="right">6</td>
+<td>H Clinton</td>
+	</tr>
+	<tr>
+<td align="right">37</td>
+<td>Morley Schaffer</td>
+<td align="right">6</td>
+<td>H Clinton</td>
+	</tr>
+</tbody></table><!-- SQL:
+SELECT /*+ no_parallel("TVJOINQUERY1") */  ROWID "ROWID", ACTOR_NUM ACTOR_NUM, ACTOR_NAME ACTOR_NAME, AGENT_NUM AGENT_NUM, AGENT_NAME AGENT_NAME FROM "902GJIDODAJ"."TVJOINQUERY1"--></body></html>

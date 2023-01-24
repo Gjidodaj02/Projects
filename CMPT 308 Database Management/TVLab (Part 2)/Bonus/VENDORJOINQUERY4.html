@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='Cp1252'>
+  
+  <title>Result Data</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  <style>
+  * { 
+    margin: 0; 
+    padding: 0; 
+  }
+  body { 
+    font: 14px/1.4 Palatino, Serif; 
+  }
+  
+  /* 
+  Generic Styling, for Desktops/Laptops 
+  */
+  table { 
+    width: 100%; 
+    border-collapse: collapse; 
+  }
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  th { 
+    background: #333; 
+    color: white; 
+    font-weight: bold; 
+  }
+  td, th { 
+    padding: 6px; 
+    border: 1px solid #9B9B9B; 
+    text-align: left; 
+  }
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+    table, thead, tbody, th, td, tr { display: block; }
+    thead tr { position: absolute;top: -9999px;left: -9999px;}
+    tr { border: 1px solid #9B9B9B; }
+    td { border: none;border-bottom: 1px solid #9B9B9B; position: relative;padding-left: 50%; }
+    
+    td:before { position: absolute;top: 6px;left: 6px;width: 45%; padding-right: 10px; white-space: nowrap;}
+    
+    /*
+    Label the data
+    */
+td:nth-of-type(1):before { content: "PNUM"; }
+td:nth-of-type(2):before { content: "LOCATION"; }
+td:nth-of-type(3):before { content: "SNUM"; }
+td:nth-of-type(4):before { content: "SOURCECITY"; }
+  }
+  
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    body { 
+      padding: 0; 
+      margin: 0; 
+      width: 320px; }
+    }
+  
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body { 
+      width: 495px; 
+    }
+  }
+  
+  </style>
+  <!--<![endif]-->
+<script type="text/javascript">
+
+function search(){
+  
+  var s = document.getElementById('search').value;
+
+  rows = document.getElementById('data').getElementsByTagName('TR');
+  for(var i=0;i<rows.length;i++){
+    if ( rows[i].textContent.indexOf(s)>0  || s.length==0 ) {
+	  rows[i].style.display ='';
+    } else {
+      rows[i].style.display ='none';
+    }
+  }
+}
+
+
+var timer;
+function delayedSearch() {
+	clearTimeout(timer);
+	console.log('delay-ing')
+    timer = setTimeout(function () {
+		console.log('delay-running')
+		search();
+    }, 500);
+  }</script>
+</head>
+
+<body>
+<div><input type="text" size="30" maxlength="1000" value="" id="search" onkeyup="delayedSearch();" /><input type="button" value="Go" onclick="lsearch();"/> </div>
+<table><thead><tr>	<th>PNUM</th>
+	<th>LOCATION</th>
+	<th>SNUM</th>
+	<th>SOURCECITY</th>
+</tr></thead>
+<tbody id="data">
+
+	<tr>
+<td>P500</td>
+<td>LosAngeles</td>
+<td>S10</td>
+<td>LosAngeles</td>
+	</tr>
+	<tr>
+<td>P700</td>
+<td>LosAngeles</td>
+<td>S10</td>
+<td>LosAngeles</td>
+	</tr>
+	<tr>
+<td>P100</td>
+<td>Seattle</td>
+<td>S20</td>
+<td>Seattle</td>
+	</tr>
+	<tr>
+<td>P200</td>
+<td>NewOrleans</td>
+<td>S30</td>
+<td>NewOrleans</td>
+	</tr>
+	<tr>
+<td>P500</td>
+<td>LosAngeles</td>
+<td>S40</td>
+<td>LosAngeles</td>
+	</tr>
+	<tr>
+<td>P700</td>
+<td>LosAngeles</td>
+<td>S40</td>
+<td>LosAngeles</td>
+	</tr>
+	<tr>
+<td>P100</td>
+<td>Seattle</td>
+<td>S50</td>
+<td>Seattle</td>
+	</tr>
+	<tr>
+<td>P500</td>
+<td>LosAngeles</td>
+<td>S60</td>
+<td>LosAngeles</td>
+	</tr>
+	<tr>
+<td>P700</td>
+<td>LosAngeles</td>
+<td>S60</td>
+<td>LosAngeles</td>
+	</tr>
+	<tr>
+<td>P300</td>
+<td>Miami</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+	</tr>
+	<tr>
+<td>P400</td>
+<td>Miami</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+	</tr>
+	<tr>
+<td>P600</td>
+<td>Poughkeepsie</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+	</tr>
+</tbody></table><!-- SQL:
+SELECT /*+ no_parallel("VENDORJOINQUERY4") */  * FROM "902GJIDODAJ"."VENDORJOINQUERY4"--></body></html>
