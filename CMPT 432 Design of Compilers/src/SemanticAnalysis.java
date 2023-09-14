@@ -2,8 +2,6 @@ import java.util.ArrayList;
 
 public class SemanticAnalysis {
 
-    private static CodeGen CodeGen = new CodeGen();
-
     //REGEX variables
     private static final String TYPE = "int|string|boolean";
     private static final String OPEN_BLOCK = "[{]";
@@ -67,7 +65,6 @@ public class SemanticAnalysis {
             System.out.println("SEMANTIC ANALYSIS: Analysis completed successfully\n");
             printAST(progPosition);
             printSymbolTable(progPosition);
-            //CodeGen.codeGen(ASTstream, ASTdepth, symbolName, symbolType, symbolIsInit, symbolUsed, symbolScope, symbolScopeLetter, scopes);
 
         }//if
 

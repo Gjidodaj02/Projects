@@ -1,5 +1,39 @@
+    /* Original Example */
+{}$
+{{{{{{}}}}}}$
+{{{{{{}}} /* comments are ignored */ }}}}$ /* test for error */
+{ /* comments are still ignored */ int @}$
 {
-string a
-a = "hello"
-print(a)
+int a @
+a = a
+string b
+a = b
+}$
+    /* check all tokens */
+{print()whileif" "intstringbooleanabc012==!=falsetrue+}$
+
+    /* testing comments*/
+{visible /* not visible */} $
+{visible /* not
+visible */}$
+
+    /* testing strings */
+{"test"}$
+{"int"}$
+{"test @ "}$
+{"visible /*not visible*/"}$
+
+    /* testing parser and symantic analysis*/
+{
+ int a
+ boolean b
+ {
+ string c
+ a = 5
+ b = true /* no comment */
+ c = "inta"
+ print(c)
+ }
+ print(b)
+ print(a)
 }$
